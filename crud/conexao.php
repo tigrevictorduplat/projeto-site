@@ -4,5 +4,5 @@ $con =  mysqli_connect("localhost","root","");
         echo("Conexão Inválida!" .mysqli_error($con));
     };
 
-    mysqli_select_db($con,"projeto-site");
+    mysqli_select_db($con,"banco-site");
 ?>
