@@ -3,14 +3,53 @@
     padding: 0;
 }
 
-header {
-    background-color: lightblue;
+html, body {
+    width: 100%;
 }
 
+header {
+    background-color: lightblue;
+    padding: 0.25rem;
+    
+}
+.head-logo{
+    width: 56px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgb(92, 0, 54);
+    margin: 0.25rem;
+}
+
+.head-nav li, .foot-index li{
+    display: inline;
+    padding: 0.5rem;
+}
+
+main {
+        
+    background-color: lightgoldenrodyellow;
+}
 .container{
     background-color: lightcoral;
 }
 
+.post1 {
+    color: rgb(0, 119, 128);
+}
+
+.post2 {
+    color: rgb(43, 226, 134);
+}
+
 footer {
-    background-color: lightgreen;
+    background-color: lightslategray;
+    text-align: center;
+}
+
+
+
+
+.foot-authors {
+    color: lightblue;
+    
 }

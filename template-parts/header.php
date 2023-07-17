@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../src/style.css" >
     <title>Nosso Site</title>
 </head>
 <body>
     <header>
-        <nav>
-            <span>Pág 1</span>
-            <span>Pág 2</span>
-            <span>Pág 3</span>
-            <span>Login</span>
-            <span>Cadastre-se</span>
-        </nav>
+        <div class="head-logo">
+            &nbsp;
+        </div>
+        <div class="head-nav">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="pag1.php">Pág 1</a></li>
+                <li><a href="pag2.php">Pág 2</a></li>
+                <li><a href="../crud/login.php">Login</a></li>
+                <li><a href="../crud/cadastro.php">Cadastre-se</a></li>
+            </ul>
+        </div>
     </header>
     
 
