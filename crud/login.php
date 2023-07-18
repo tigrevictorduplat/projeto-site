@@ -8,7 +8,7 @@ if(isset($_POST['login'],$_POST['password'])) {
     $result = mysqli_query($con, "SELECT * from tb_users WHERE `username` = '$username' AND `password` = '$password' ");
     $validation = mysqli_num_rows($result);
     if ($validation){
-      header('location:alterar.php');
+      header('location:listar.php');
       die;
     } ;
 }

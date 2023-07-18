@@ -17,7 +17,7 @@ if(isset($_POST['titulo'],$_POST['conteudo'],$_POST['autor'])){
     <input type="text" name="titulo" id="titulo"
     value="<?=$titulo?>"hidden
     >
-    <textarea type="conteudo" name="conteudo" id="conteudo" 
+    <input type="text" name="conteudo" id="conteudo" 
     value="<?= $conteudo?>"hidden
     ></textarea>
     <button type="submit">Confirmar</button>
@@ -48,7 +48,7 @@ if(isset($_POST['titulo'],$_POST['conteudo'],$_POST['autor'])){
                 <label for="conteudo">Post: </label>
             </td>
             <td>
-                <textarea type="conteudo" name="conteudo" id="conteudo" rows="5" cols="30"></textarea>
+                <textarea name="conteudo" id="conteudo" rows="5" cols="30"></textarea>
             </td>
         </tr>
     <tr>
