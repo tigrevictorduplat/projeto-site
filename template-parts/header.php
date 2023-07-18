@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style.css" >
+    <link rel="stylesheet" href="../pags/style.css" >
     <title>Nosso Site</title>
 </head>
 <body>
@@ -14,8 +14,10 @@
         <div class="head-nav">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="pag1.php">Pág 1</a></li>
-                <li><a href="pag2.php">Pág 2</a></li>
+                <li><a href="pag1.php">Artista 1</a></li>
+                <li><a href="pag2.php">Artista 2</a></li>
+                <li><a href="pag3.php">Pag 3</a></li>
+                <li><a href="about.php">Quem Somos</a></li>
                 <li><a href="../crud/login.php">Login</a></li>
                 <li><a href="../crud/cadastro.php">Cadastre-se</a></li>
             </ul>

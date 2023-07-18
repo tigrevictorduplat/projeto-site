@@ -1,11 +1,8 @@
 <?php include("../template-parts/header.php"); ?>
 
 <div class="container">
-<main>
-<?php
-$postID = 2; 
-include("../template-parts/content.php"); 
-?>
+<main class="about">
+    <?php include("../template-parts/form-about.php") ?>
 </main>    
 </div>
 <?php include("../template-parts/footer.php"); ?>

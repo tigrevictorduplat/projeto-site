@@ -1,19 +1,18 @@
+
 <?php
+include("../crud/conexao.php"); 
+$result = mysqli_query($con,"SELECT * FROM tb_post WHERE `post_id` = '$postID' ");
+$row = mysqli_fetch_array($result);
+?>
+<div class="<?= $row['post_class']?>">
 
-include ("../crud/conexao.php");
-$result = mysqli_query($con, "SELECT * from tb_posts");
-$row = mysqli_fetch_array ($result);
+    <img src="<?= $row['post_first_imgURL'] ?>" alt="Imagem Principal">
+    <h2><?=$row['post_title']?></h2>
 
-if ($postNumber == 2);{
-    $postID = $row['post_id']+1;
-    $result = mysqli_query($con, "SELECT * from tb_posts WHERE `post_id` = '$postID'");
-    $row = mysqli_fetch_array ($result);
-}
+    <p><?= $row['post_first_content']  ?></p>
 
- echo(
-    '<h2>'.$row['post_title'].'</h2>' .
-    '<p>'.$row['post_content'].'</p>' .
-    '<p>Escrito por <strong>'.$row['post_author'].'</strong></p>' 
- );
-    
-    
+    <img src="<?= $row['post_second_imgURL']?>" alt="Imagem Secundária">
+
+    <p><?= $row['post_second_content'] ?></p>
+
+</div>

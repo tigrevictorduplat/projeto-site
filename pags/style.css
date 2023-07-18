@@ -24,29 +24,28 @@ header {
     display: inline;
     padding: 0.5rem;
 }
-
-main {
-        
-    background-color: lightgoldenrodyellow;
-}
 .container{
-    background-color: lightcoral;
+    padding: 0.5rem;
+}
+main {
+    color: darkblue;
+    background-color: lightblue;
 }
 
 .post1 {
-    color: rgb(0, 119, 128);
+    color: rgb(15, 120, 129);
+    background-color: rgb(196, 167, 179);
 }
 
 .post2 {
-    color: rgb(43, 226, 134);
+    color: rgb(0, 85, 43);
+    background-color: lightgreen;
 }
 
 footer {
     background-color: lightslategray;
     text-align: center;
 }
-
-
 
 
 .foot-authors {

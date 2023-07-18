@@ -1,10 +1,10 @@
 <?php include("../template-parts/header.php"); ?>
 
 <div class="container">
-<main class="post1">
+<main>
 <?php
-$postNumber=1;
-include("../template-parts/content.php");
+$postID = 1; 
+include("../template-parts/content.php"); 
 ?>
 </main>    
 </div>
