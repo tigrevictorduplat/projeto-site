@@ -9,17 +9,17 @@
         ducimus suscipit corrupti atque similique excepturi.
     </p>
 </main>    
-
+<hr>
 <?php
 $postID = 1; 
 include("../template-parts/content.php"); 
 ?>
-
+<hr>
 <?php
-$postID = 2; 
+$postID = 3; 
 include("../template-parts/content.php"); 
 ?>
 
-</section>
+
 </div>
 <?php include("../template-parts/footer.php"); ?>

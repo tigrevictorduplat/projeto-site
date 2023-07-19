@@ -2,7 +2,10 @@
 
 <div class="container">
 <main class="post3">
-<h2>Pag 3</h2>
+<?php
+$postID = 3; 
+include("../template-parts/content.php"); 
+?>
 </main>    
 </div>
 <?php include("../template-parts/footer.php"); ?>

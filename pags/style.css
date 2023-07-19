@@ -8,9 +8,13 @@ html, body {
 }
 
 header {
-    background-color: lightblue;
+    background-color: rgb(5, 32, 41);
     padding: 0.25rem;
-    
+    position: fixed;
+    width: 100%;
+}
+header a {
+    color: antiquewhite;
 }
 .head-logo{
     width: 56px;
@@ -25,21 +29,22 @@ header {
     padding: 0.5rem;
 }
 .container{
-    padding: 0.5rem;
-}
-main {
+    padding: 6rem 2.5rem 2rem;
     color: darkblue;
     background-color: lightblue;
 }
 
-.post1 {
-    color: rgb(15, 120, 129);
-    background-color: rgb(196, 167, 179);
+hr {
+  border: 1px solid rgb(3, 1, 90);
+  margin: 0.5rem 0;
 }
 
-.post2 {
-    color: rgb(0, 85, 43);
-    background-color: lightgreen;
+.post1 img {
+    width: 50%;
+}
+
+.post3 img {
+    width: 50%;
 }
 
 footer {
