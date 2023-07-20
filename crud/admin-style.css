@@ -10,8 +10,14 @@ header {
 }
 header a {
     color: antiquewhite;
+    text-decoration: none;
 }
-
+header a:hover {
+    color: rgba(250, 235, 215, 0.50);
+    text-decoration: none;
+    font-size: 1.05rem;
+    
+}
 .head-logo{
     width: 56px;
     height: 56px;
@@ -36,6 +42,25 @@ header a {
     text-align: center;
 
 }
+.admin-container table td{
+    
+    padding: 0 0.75rem;
+    text-align: center;
+
+}
+.icon-col {
+    width: 10%;
+}
+
+.admin-container table a{
+    text-decoration: none;
+}
+
+.admin-container table a:hover{
+    color: rgba(0, 0, 255, 0.25);
+    font-size: 1.15rem;
+}
+
 footer {
     background-color: lightslategray;
     text-align: center;

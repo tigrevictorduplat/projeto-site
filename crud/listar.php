@@ -27,6 +27,7 @@ $result = mysqli_query($con, "SELECT * from tb_index");
         <th>Página 1</th>
         <th>Página 2</th>
         <th>Página 3</th>
+        <th class="icon-col"></th>
     </tr>
 <?php while ($indexArray = mysqli_fetch_array ($result)){
     ?>
@@ -34,15 +35,13 @@ $result = mysqli_query($con, "SELECT * from tb_index");
     <td><?= $indexArray["index_pag1"]; ?></td>
     <td><?= $indexArray["index_pag2"]; ?> </td>
     <td><?= $indexArray["index_pag3"]; ?> </td>
+    <td><a href="alterar-index.php?index_config_id=<?= $indexArray['index_config_id'];?>">
+    <i class="fa fa-cog"></i></a>
+    </td>
 </tr>
 <?php
 } 
 ?>
-<tr>
-    <td colspan="3" style="text-align: center;">
-    <a href="alterar-index.php?index_config_id=<?= $indexArray['index_config_id'];?>"?>EDITAR EXIBIÇÃO</a>
-    </td>
-</tr>
 </table>
 </div>
 <br>
@@ -56,7 +55,7 @@ $result = mysqli_query($con, "SELECT * from tb_post");
         <th>ID</th>
         <th>Titulo</th>
         <th>Conteudo</th>
-        <th>Ação</th>
+        <th class="icon-col"></th>
     </tr>
 <?php while ($pagArray = mysqli_fetch_array ($result)){
     ?>
@@ -64,14 +63,14 @@ $result = mysqli_query($con, "SELECT * from tb_post");
     <td><?= $pagArray["post_id"]; ?> </td>
     <td><?= $pagArray["post_title"]; ?> </td>
     <td><?= $pagArray["post_first_content"]; ?> </td>
-    <td><a href="alterar.php?post_id=<?= $pagArray['post_id'];?>"?>Editar Página</a></td>
+    <td><a href="alterar.php?post_id=<?= $pagArray['post_id'];?>"?><i class="fa fa-pencil"></i></a></td>
 </tr>
 <?php
 } 
 ?>
 <tr>
     <td colspan="4" style="text-align: center;">
-    <a href="inserir.php">ADICIONAR NOVA POSTAGEM</a>
+    <a href="inserir.php">Nova Postagem <i class="fa fa-plus"></i></a>
     </td>
 </tr>
 </table>
@@ -87,7 +86,7 @@ $result = mysqli_query($con, "SELECT * from tb_about");
         <th>Quem Somos</th>
         <th>Missão</th>
         <th>Valores</th>
-        <th>Ação</th>
+        <th class="icon-col"></th>
     </tr>
 <?php while ($aboutArray = mysqli_fetch_array ($result)){
     ?>
@@ -95,7 +94,7 @@ $result = mysqli_query($con, "SELECT * from tb_about");
     <td><?= $aboutArray["about_who"]; ?> </td>
     <td><?= $aboutArray["about_mission"]; ?> </td>
     <td><?= $aboutArray["about_valors"]; ?> </td>
-    <td><a href="alterar-about.php?about_id=<?= $aboutArray['about_id'];?>"?>Editar Sobre Nós</a></td>
+    <td><a href="alterar-about.php?about_id=<?= $aboutArray['about_id'];?>"?><i class="fa fa-pencil"></i></a></td>
 </tr>
 <?php
 } 
