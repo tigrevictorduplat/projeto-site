@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(5, 32, 41);
+    padding: 0.25rem;
+
+}
+header a {
+    color: antiquewhite;
+}
+
+.head-logo{
+    width: 56px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgb(92, 0, 54);
+    margin: 0.25rem;
+}
+
+.head-nav li, .foot-index li{
+    display: inline;
+    padding: 0.5rem;
+}
+
+.admin-container{
+    padding: 0.45rem;
+    color: darkblue;
+    background-color: lightblue;
+}
+.admin-container table {
+    
+    margin: 0 auto;
+    text-align: center;
+
+}
+footer {
+    background-color: lightslategray;
+    text-align: center;
+}
+
+.btn-login {
+    color: lightblue;
+    background-color: darkblue;
+    padding: 0.15rem;
+}

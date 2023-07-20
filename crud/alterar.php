@@ -1,4 +1,6 @@
 <?php
+include("crud-templates/crud-header.php");
+
 $postID = (isset($_GET['post_id']))? $_GET['post_id'] : $_POST['post_id'];
 
 if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'],$_POST['post_class'])){
@@ -13,7 +15,7 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
     include("conexao.php");
     mysqli_query($con,"UPDATE tb_post SET post_title ='$postTitle' , post_first_content = '$firstContent' ,post_second_content='$secondContent' ,post_first_imgURL='$firstURL' ,post_second_imgURL='$secondURL' ,post_class='$postClass' WHERE post_id = '$postID' ");
 
-    header("location:../pags/index.php");
+    header("location:listar.php");
     die;
 }
 
@@ -82,3 +84,7 @@ $row = mysqli_fetch_array($result);
         </tr>
     </table>
 </form>
+
+<?php 
+include("crud-templates/crud-footer.php");
+?>

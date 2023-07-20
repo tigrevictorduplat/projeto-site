@@ -2,7 +2,6 @@
 
 <div class="container">
     <?php
-    $aboutID = 1;
     include("../template-parts/about-content.php")
     ?>   
 </div>

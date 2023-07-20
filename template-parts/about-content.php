@@ -1,6 +1,6 @@
 <?php
 include("../crud/conexao.php"); 
-$result = mysqli_query($con,"SELECT * FROM tb_about WHERE `about_id` = '$aboutID' ");
+$result = mysqli_query($con,"SELECT * FROM tb_about WHERE `about_id` = 1 ");
 $row = mysqli_fetch_array($result);
 ?>
 <div class="about">

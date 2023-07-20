@@ -1,4 +1,6 @@
 <?php
+include("crud-templates/foreign-header.php");
+
 if(isset($_POST['login'],$_POST['password'],$_POST['confirm-password'])) {
     
     $username = $_POST['login'];
@@ -58,7 +60,8 @@ if(isset($_POST['login'],$_POST['password'],$_POST['confirm-password'])) {
         </td>
     </tr>
     </table>
-    
-    
-
 </form>
+
+<?php 
+include("crud-templates/crud-footer.php");
+?>

@@ -1,4 +1,5 @@
 <?php
+include("crud-templates/crud-header.php");
 
 if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'],$_POST['post_class'])){
 
@@ -14,29 +15,96 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
 }
 ?>
 
-
+<div class="admin-views">
 <?php
 include ("conexao.php");
+
+$result = mysqli_query($con, "SELECT * from tb_index");
+?>
+<div class="admin-index">
+<table>
+    <tr>
+        <th>Página 1</th>
+        <th>Página 2</th>
+        <th>Página 3</th>
+    </tr>
+<?php while ($indexArray = mysqli_fetch_array ($result)){
+    ?>
+    <tr>
+    <td><?= $indexArray["index_pag1"]; ?></td>
+    <td><?= $indexArray["index_pag2"]; ?> </td>
+    <td><?= $indexArray["index_pag3"]; ?> </td>
+</tr>
+<?php
+} 
+?>
+<tr>
+    <td colspan="3" style="text-align: center;">
+    <a href="alterar-index.php?index_config_id=<?= $indexArray['index_config_id'];?>"?>EDITAR EXIBIÇÃO</a>
+    </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<?php
 $result = mysqli_query($con, "SELECT * from tb_post");
 ?>
-<div class="container">
+<div class="admin-pag">
 <table>
     <tr>
         <th>ID</th>
         <th>Titulo</th>
         <th>Conteudo</th>
+        <th>Ação</th>
     </tr>
-<?php while ($row = mysqli_fetch_array ($result)){
+<?php while ($pagArray = mysqli_fetch_array ($result)){
     ?>
     <tr>
-    <td><?= $row["post_id"]; ?> </td>
-    <td><?= $row["post_title"]; ?> </td>
-    <td><?= $row["post_first_content"]; ?> </td>
-    <td><a href="alterar.php?post_id=<?= $row['post_id'];?>"?>Editar Post</a></td>
+    <td><?= $pagArray["post_id"]; ?> </td>
+    <td><?= $pagArray["post_title"]; ?> </td>
+    <td><?= $pagArray["post_first_content"]; ?> </td>
+    <td><a href="alterar.php?post_id=<?= $pagArray['post_id'];?>"?>Editar Página</a></td>
 </tr>
 <?php
 } 
 ?>
-<p><a href="inserir.php">ADICIONAR NOVA POSTAGEM</a></p>
+<tr>
+    <td colspan="4" style="text-align: center;">
+    <a href="inserir.php">ADICIONAR NOVA POSTAGEM</a>
+    </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<?php
+$result = mysqli_query($con, "SELECT * from tb_about");
+?>
+<div class="admin-about">
+<table>
+    <tr>
+        <th>Quem Somos</th>
+        <th>Missão</th>
+        <th>Valores</th>
+        <th>Ação</th>
+    </tr>
+<?php while ($aboutArray = mysqli_fetch_array ($result)){
+    ?>
+    <tr>
+    <td><?= $aboutArray["about_who"]; ?> </td>
+    <td><?= $aboutArray["about_mission"]; ?> </td>
+    <td><?= $aboutArray["about_valors"]; ?> </td>
+    <td><a href="alterar-about.php?about_id=<?= $aboutArray['about_id'];?>"?>Editar Sobre Nós</a></td>
+</tr>
+<?php
+} 
+?>
 
-<p><a href="../pags/index.php">VOLTAR PARA A PÁGINA PRINCIPAL</a></p>
+</table>
+    </div>
+
+
+<?php 
+include("crud-templates/crud-footer.php");
+?>

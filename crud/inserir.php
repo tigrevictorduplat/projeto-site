@@ -1,4 +1,6 @@
 <?php
+include("crud-templates/crud-header.php");
+
 if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'],$_POST['post_class'])){
 
     $postClass = $_POST['post_class'];
@@ -98,3 +100,7 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
         </tr>
     </table>
 </form>
+
+<?php 
+include("crud-templates/crud-footer.php");
+?>

@@ -1,4 +1,6 @@
 <?php
+include("crud-templates/foreign-header.php");
+
 if(isset($_POST['login'],$_POST['password'])) {
     
     $username = $_POST['login'];
@@ -8,7 +10,8 @@ if(isset($_POST['login'],$_POST['password'])) {
     $result = mysqli_query($con, "SELECT * from tb_users WHERE `username` = '$username' AND `password` = '$password' ");
     $validation = mysqli_num_rows($result);
     if ($validation){
-      header('location:listar.php');
+        $_SESSION['username']= $username; 
+        header('location:listar.php');
       die;
     } ;
 }
@@ -34,7 +37,7 @@ if(isset($_POST['login'],$_POST['password'])) {
         </tr>
     <tr>
         <td colspan="2" style="text-align:center;">
-            <button type="submit" style="width: 80%; ">Conectar</button>
+            <button class="btn-login" type="submit">Conectar</button>
         </td>
     </tr>
     </table>
@@ -42,3 +45,7 @@ if(isset($_POST['login'],$_POST['password'])) {
     
 
 </form>
+
+<?php 
+include("crud-templates/crud-footer.php");
+?>
