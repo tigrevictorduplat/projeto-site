@@ -62,6 +62,7 @@ header a:hover {
 }
 
 footer {
+    align-self: ;
     background-color: lightslategray;
     text-align: center;
 }

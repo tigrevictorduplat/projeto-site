@@ -1,4 +1,5 @@
 
+</div>   
     <footer>
     <div class="foot-index">
         <ul>

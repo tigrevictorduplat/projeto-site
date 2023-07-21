@@ -39,6 +39,13 @@ header a:hover {
     padding: 6rem 2.5rem 2rem;
     color: darkblue;
     background-color: lightblue;
+    width: 50%;
+    float: left;
+}
+
+.right-content{
+    float: right;
+    width: 50%;
 }
 
 hr {
@@ -52,10 +59,6 @@ hr {
 
 .post3 img {
     width: 50%;
-}
-
-.about {
-    
 }
 
 footer {

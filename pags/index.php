@@ -3,9 +3,9 @@
 <main>
     <h2>Conteudo Principal</h2>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-        Nisi, voluptate aliquam aperiam vero quidem ea, fugit dolores <br>
-        placeat quos quaerat distinctio sunt dignissimos molestias <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Nisi, voluptate aliquam aperiam vero quidem ea, fugit dolores 
+        placeat quos quaerat distinctio sunt dignissimos molestias 
         ducimus suscipit corrupti atque similique excepturi.
     </p>
 </main>    
@@ -29,6 +29,16 @@ $postID = $currentPag['index_pag3'];
 include("../template-parts/content.php"); 
 ?>
 
-
 </div>
+<section class="right-content">
+    <p>Subtitulo</p>
+    <div class="album-img">
+        Imagem
+    </div>
+    <p>Nome da Música (Tópico)</p>
+    <small>Nome do Artista</small>
+    <div>
+        Barrinha de Carregamento
+    </div>
+</section>
 <?php include("../template-parts/footer.php"); ?>
