@@ -1,6 +1,6 @@
 <?php include("../template-parts/header.php"); ?>
 
-<div class="container">
+<div class="content">
 <main>
 <?php
 include ("../crud/conexao.php");
