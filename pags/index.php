@@ -20,14 +20,15 @@ include("../template-parts/content.php");
 ?>
 </div>
 <section class="right-content">
-    <p>Subtitulo</p>
-    <div class="album-img">
-        Imagem
-    </div>
-    <p>Nome da Música (Tópico)</p>
-    <small>Nome do Artista</small>
-    <div>
-        Barrinha de Carregamento
+     <h2>SpotMy</h2>
+    <figure class="album-img">
+        <img src="../src/img/album.jpg" alt="Imagem do Tópico Atual">
+    </figure>
+    <h2>Nome da Música (Tópico)</h2>
+    <p>Nome do Artista</p>
+    <div class="tracker">
+        <progress value="2" max="100"></progress> <br>
+        <i class="fa fa-play-circle fa-4x"></i>
     </div>
 </section>
 <?php include("../template-parts/footer.php"); ?>
