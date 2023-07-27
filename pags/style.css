@@ -24,7 +24,7 @@ html{
 
 html, body {
     width: 100%;
-    
+    background-color: var(--primary);
 }
 
 /* Absolute Container */
@@ -34,7 +34,6 @@ html, body {
     padding: 0 5rem;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
     text-align: center;
 }
 
@@ -80,7 +79,14 @@ header a:hover {
     padding: 1.5rem;
 }
 
-/* Main Content */
+/* Solo Page */
+#page{
+    flex: 0 0 100%;
+}
+#about {
+    text-align: center;
+}
+/* Content */
 
 .content{
     padding: 1rem;
@@ -104,6 +110,7 @@ header a:hover {
     padding: 3rem;
     align-self:flex-start;
     position: sticky;
+    top: 0;
     background-color: var(--tetiary-dark);
     box-sizing: border-box;
     
@@ -150,24 +157,20 @@ hr {
   margin: 0.5rem 0;
 }
 
-.post1 img {
+.post img {
     width: 50%;
 }
-
-.post3 img {
-    width: 50%;
-}
-
 
 /* Footer */
 
-footer {
-    flex: 0 0 100%;
+.foot-index {
+    display: flex;
     background-color: var(--secondary);
     margin: 0 5rem;
     box-sizing: border-box;
     height: 5rem;
-    width: 40rem;
+    justify-content: space-evenly;
+    align-items: center;
 }
 footer a {
     color: var(--tetiary);
@@ -177,10 +180,6 @@ footer a:hover {
     color: var(--tetiary);
     opacity: 0.5;
     
-}
-.foot-index{
-    justify-content: space-evenly;
-    align-items: center;
 }
 .foot-index li {
     display: inline;

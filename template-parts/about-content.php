@@ -3,7 +3,7 @@ include("../crud/conexao.php");
 $result = mysqli_query($con,"SELECT * FROM tb_about WHERE `about_id` = 1 ");
 $row = mysqli_fetch_array($result);
 ?>
-<div class="about">
+<div id="about" class="about">
 
     <h2>Quem Somos?</h2>
     <p><?= $row['about_who']  ?></p>

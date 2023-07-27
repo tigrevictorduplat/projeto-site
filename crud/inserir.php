@@ -1,16 +1,15 @@
 <?php
 include("crud-templates/crud-header.php");
 
-if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'],$_POST['post_class'])){
+if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'])){
 
-    $postClass = $_POST['post_class'];
     $postTitle = $_POST['post_title'];
     $firstContent = $_POST['post_first_content'];
     $secondContent = $_POST['post_second_content'];
     $firstURL = $_POST['post_first_imgURL'];
     $secondURL = $_POST['post_second_imgURL']; 
  echo(
-    '<div class="'.$postClass.'">'.
+    '<div class="post">'.
     '<h2>'.$postTitle.'</h2>' .
     '<p>'.$firstContent.'</p>' .
     '<img src="'.$firstURL.'" alt="Imagem Principal">' .
@@ -19,8 +18,6 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
  ) ;
 ?>
 <form action="listar.php" method="post">
-    <input type="text" name="post_class" id="post_class"
-    value="<?= $postClass?>" hidden
     >
     <input type="text" name="post_title" id="post_title"
     value="<?=$postTitle?>"hidden
@@ -44,14 +41,6 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
 
 <form action="inserir.php" method="post">
 <table>
-        <tr>
-            <td>
-                <label for="post_class">Classe:</label>
-            </td>
-            <td>
-            <input type="text" name="post_class" id="post_class">
-            </td>
-        </tr>
         <tr>
             <td>
                 <label for="post_title">Titulo: </label>

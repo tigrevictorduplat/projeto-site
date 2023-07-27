@@ -1,5 +1,6 @@
 <?php include("../template-parts/header.php"); ?>
-<div class="content">
+<div class="container">
+    <div class="content">
 <?php
 include ("../crud/conexao.php");
 
@@ -31,4 +32,5 @@ include("../template-parts/content.php");
         <i class="fa fa-play-circle fa-4x"></i>
     </div>
 </section>
+</div>
 <?php include("../template-parts/footer.php"); ?>

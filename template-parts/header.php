@@ -14,7 +14,6 @@
     <title>SpotMy</title>
 </head>
 <body>    
-<div class="container">
     <header>
         <figure class="head-logo">
             <a href="https://open.spotify.com/"><i class="fa fa-spotify fa-3x"></i></a>
