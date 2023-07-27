@@ -27,41 +27,20 @@ if(isset($_POST['login'],$_POST['password'],$_POST['confirm-password'])) {
     };
 }
 ?>
-
+<div class="signup">
 <form action="cadastro.php" method="post">
-    <table>
-        <tr>
-            <td>
-                <label for="login">Login: </label>
-            </td>
-            <td>
-                <input type="text" name="login" id="login">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="password">Senha: </label>
-            </td>
-            <td>
-                <input type="password" name="password" id="password">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="confirm-password">Confirmar Senha: </label>
-            </td>
-            <td>
-                <input type="password" name="confirm-password" id="confirm-password">
-            </td>
-        </tr>
-    <tr>
-        <td colspan="2" style="text-align:center;">
-            <button type="submit" style="width: 80%; ">Cadastrar-se</button>
-        </td>
-    </tr>
-    </table>
-</form>
 
+<label for="login">Login: </label>
+<input type="text" name="login" id="login">
+<label for="password">Senha: </label>
+<input type="password" name="password" id="password">
+<label for="confirm-password">Confirmar Senha: </label>
+<input type="password" name="confirm-password" id="confirm-password">
+<button type="submit">Cadastrar-se</button>
+<br>
+<p>Já tem um cadastro? <a href="login.php">Faça login!</a></p>
+</form>
+</div>
 <?php 
 include("crud-templates/crud-footer.php");
 ?>

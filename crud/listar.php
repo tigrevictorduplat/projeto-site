@@ -45,6 +45,7 @@ $result = mysqli_query($con, "SELECT * from tb_index");
 </table>
 </div>
 <br>
+<hr>
 <br>
 <?php
 $result = mysqli_query($con, "SELECT * from tb_post");
@@ -76,6 +77,7 @@ $result = mysqli_query($con, "SELECT * from tb_post");
 </table>
 </div>
 <br>
+<hr>
 <br>
 <?php
 $result = mysqli_query($con, "SELECT * from tb_about");

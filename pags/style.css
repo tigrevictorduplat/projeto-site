@@ -1,4 +1,4 @@
-
+/* Font Import*/
 @font-face {
     font-family: 'Spotifine';
     src: url(../src/font/Gotham-Spotify-Font/Gotham-Light.otf);
@@ -8,7 +8,7 @@
     src: url(../src/font/Gotham-Spotify-Font/Gotham-Thin.otf);
 }
 
-
+/* Resets and Variables*/
 html{
     --primary : #07598C;
     --secondary : #1A3540;
