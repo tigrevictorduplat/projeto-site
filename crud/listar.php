@@ -106,7 +106,7 @@ $result = mysqli_query($con, "SELECT * from tb_about");
 <hr>
 <br>
 <?php
-$result = mysqli_query($con, "SELECT * from tb_extra");
+$result = mysqli_query($con, "SELECT * FROM tb_extras ");
 ?>
 <div class="admin-extra">
 <table>
@@ -119,7 +119,7 @@ $result = mysqli_query($con, "SELECT * from tb_extra");
 <?php while ($extraArray = mysqli_fetch_array($result)){
     ?>
     <tr>
-    <td><?= $extraArray["extra_post_foreing_key "]; ?> </td>
+    <td><?= $extraArray["extra_post_foreing_key"]; ?> </td>
     <td><?= $extraArray["extra_subtitle"]; ?> </td>
     <td><?= $extraArray["extra_img"]; ?> </td>
     <td><a href="alterar-extra.php?extra_id=<?= $extraArray['extra_id'];?>"?><i class="fa fa-pencil"></i></a></td>
