@@ -1,9 +1,8 @@
 <?php
 include("crud-templates/crud-header.php");
 
-if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'],$_POST['post_class'])){
+if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'])){
 
-    $postClass = $_POST['post_class'];
     $postTitle = $_POST['post_title'];
     $firstContent = $_POST['post_first_content'];
     $secondContent = $_POST['post_second_content'];
@@ -11,7 +10,7 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
     $secondURL = $_POST['post_second_imgURL'];
     
     include("conexao.php");
-    mysqli_query($con,"INSERT INTO tb_post (post_title,post_first_content,post_second_content,post_first_imgURL,post_second_imgURL,post_class) VALUES ('$postTitle','$firstContent','$secondContent','$firstURL','$secondURL','$postClass')");
+    mysqli_query($con,"INSERT INTO tb_post (post_title,post_first_content,post_second_content,post_first_imgURL,post_second_imgURL,post_class) VALUES ('$postTitle','$firstContent','$secondContent','$firstURL','$secondURL')");
 }
 ?>
 
@@ -71,7 +70,7 @@ $result = mysqli_query($con, "SELECT * from tb_post");
 ?>
 <tr>
     <td colspan="4" style="text-align: center;">
-    <a href="inserir.php">Nova Postagem <i class="fa fa-plus"></i></a>
+    <a href="inserir.php"><strong>Nova Postagem</strong><i class="fa fa-plus"></i></a>
     </td>
 </tr>
 </table>
@@ -101,11 +100,40 @@ $result = mysqli_query($con, "SELECT * from tb_about");
 <?php
 } 
 ?>
-
 </table>
-    </div>
+</div>
+<br>
+<hr>
+<br>
+<?php
+$result = mysqli_query($con, "SELECT * from tb_extra");
+?>
+<div class="admin-extra">
+<table>
+    <tr>
+        <th>Post Relacionado</th>
+        <th>Subtítulo</th>
+        <th>Imagem Extra</th>
+        <th class="icon-col"></th>
+    </tr>
+<?php while ($extraArray = mysqli_fetch_array($result)){
+    ?>
+    <tr>
+    <td><?= $extraArray["extra_post_foreing_key "]; ?> </td>
+    <td><?= $extraArray["extra_subtitle"]; ?> </td>
+    <td><?= $extraArray["extra_img"]; ?> </td>
+    <td><a href="alterar-extra.php?extra_id=<?= $extraArray['extra_id'];?>"?><i class="fa fa-pencil"></i></a></td>
+</tr>
+<?php
+} 
+?>
+</table>
+</div>
 
 
+
+
+</div>
 <?php 
 include("crud-templates/crud-footer.php");
 ?>

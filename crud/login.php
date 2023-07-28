@@ -16,15 +16,15 @@ if(isset($_POST['login'],$_POST['password'])) {
     } ;
 }
 ?>
-<div class="login">
+<div class="foreing login">
 <form action="login.php" method="post">
     <label for="login">Login: </label>
     <input type="text" name="login" id="login">
     <label for="password">Senha: </label>
     <input type="password" name="password" id="password">
-    <button class="btn-login" type="submit">Conectar</button>
-    <p>Ainda não tem cadastro? <a href="cadastro.php">Junte-se a nós!</a></p>
+    <button class="btn-confirm" type="submit">Conectar</button>    
 </form>
+<p>Ainda não tem cadastro? <a href="cadastro.php">Junte-se a nós!</a></p>
 </div>
 <?php 
 include("crud-templates/crud-footer.php");

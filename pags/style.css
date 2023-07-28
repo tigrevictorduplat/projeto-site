@@ -7,6 +7,10 @@
     font-family: 'Spotifine Thin';
     src: url(../src/font/Gotham-Spotify-Font/Gotham-Thin.otf);
 }
+@font-face {
+    font-family: 'Spotifine Strong';
+    src: url(../src/font/Gotham-Spotify-Font/Gotham-Bold.otf);
+}
 
 /* Resets and Variables*/
 html{
@@ -25,6 +29,10 @@ html{
 html, body {
     width: 100%;
     background-color: var(--primary);
+}
+
+strong {
+    font: 'Spotfine Bold';
 }
 
 /* Absolute Container */
@@ -83,7 +91,7 @@ header a:hover {
 #page{
     flex: 0 0 100%;
 }
-#about {
+#about p {
     text-align: center;
 }
 /* Content */

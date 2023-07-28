@@ -10,10 +10,10 @@ session_start();
     <title>Identifique-se</title>
 </head>
 <body>
-    <header>
-        <div class="head-logo">
-            &nbsp;
-        </div>
+    <header class="blur">
+        <figure class="head-logo">
+            <a href="https://open.spotify.com/"><i class="fa fa-spotify fa-3x"></i></a>
+        </figure>
         <div class="head-nav">
             <ul>
                 <li><a href="../pags/index.php">Home</a></li>
@@ -25,4 +25,4 @@ session_start();
         </div>
     </header>
 
-<div class="admin-container">
+<div class="admin-container blur">

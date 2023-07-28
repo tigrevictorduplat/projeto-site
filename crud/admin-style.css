@@ -8,17 +8,28 @@
     src: url(../src/font/Gotham-Spotify-Font/Gotham-Thin.otf);
 }
 
+@font-face {
+    font-family: 'Spotifine Strong';
+    src: url(../src/font/Gotham-Spotify-Font/Gotham-Bold.otf);
+}
+
 /* Resets and Variables*/
 html{
+    --dark-primary : hsl(203, 88%, 10%);
     --primary : #07598C;
+    --semi-primary :rgba(7, 89, 140, 0.5);
     --secondary : #1A3540;
+    --semi-secondary : rgba(26, 53, 64, 0.5);
     --tetiary : #6fa8bf;
-    --tetiary-dark: #6fa8bf85;
+    --semi-tetiary: rgba(111, 168, 191, 0.5);
     font-family: 'Spotifine', Verdana, Geneva, Tahoma, sans-serif;
 }
 html, body {
     width: 100%;
     background-color: var(--primary);
+    background-image: url(https://thumbs.dreamstime.com/b/seamless-musical-notation-pattern-13710700.jpg);
+    background-repeat: repeat; 
+   
 }
 
 * {
@@ -26,12 +37,34 @@ html, body {
     padding: 0;
 }
 
+strong {
+    font: 'Spotfine Bold';
+}
+
+/* Glass Effect */
+    .blur{
+        backdrop-filter: blur(8px) saturate(180%);
+    }
 
 /* Admin Header */
 
 header {
-    background-color:var(--secondary);
+    background-color: var(--semi-secondary);
     padding: 0.25rem;
+    margin: 0 5rem;
+    margin-top: 1.5rem;
+    /*Flex Control */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    /* Border Corners */
+    border: 1px solid var(--semi-secondary);
+    border-radius: 0.75rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
 
 }
 header a {
@@ -41,15 +74,15 @@ header a {
 header a:hover {
     color: rgba(250, 235, 215, 0.50);
     text-decoration: none;
-    font-size: 1.05rem;
     
 }
 .head-logo{
-    width: 56px;
-    height: 56px;
-    border: 1px solid black;
-    background-color: rgb(92, 0, 54);
-    margin: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
 }
 
 .head-nav li, .foot-index li{
@@ -61,27 +94,52 @@ header a:hover {
 /* Main Container */
 
 .admin-container{
-    display: flex;
     margin: 0 5rem;
-    padding: 1.5rem;
+
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--tetiary-dark);
+
+    background-color: var(--semi-tetiary);
+    color: var(--primary );
+
+    border-left: 1px solid var(--semi-tetiary);
+    border-right: 1px solid var(--semi-tetiary);
 }
 
 hr {
     border: 1px solid var(--primary);
     margin: 0.5rem 0;
   }
+/* Post Preview*/
+
+.post  {
+    padding: 0.5rem;
+}
+
+.post p{
+    text-align: justify;
+}
+
+.post img {
+    width: 25%;
+    text-align: center;
+}
+
 
 /* Listed Tables */
+
+.admin-views {
+    padding: 1rem;
+}
 
 .admin-container table {
     flex: 0 0 100%;
     margin: 0 auto;
     text-align: center;
+    color: var(--dark-primary);
 
 }
 .admin-container table td{
@@ -108,29 +166,51 @@ hr {
 
 /* Login and SignUp Forms */
 
-.login form, .signup form {
+.foreing {
+    padding: 1.5rem;
+}
+
+.foreing form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-form input {
-    margin: 0.5rem;
+form input{
+    color: var(--primary);
 }
 
-.btn-login {
+form input , form button {
+    margin: 0.5rem;
+    padding: 0.25rem;
+    border: 1px solid var(--semi-tetiary);
+    border-radius: 0.25rem;
+}
+
+.foreing p {
+    margin: 1.25rem auto ;
+}
+
+.btn-confirm {
     color: lightblue;
-    background-color: darkblue;
+    background-color: var(--primary);
     padding: 0.15rem;
 }
 
 /* Admin Footer */
 .admin-foot {
     display: flex;
-    background-color: var(--secondary);
+    flex: 0 0 100%;
+    background-color: var(--semi-secondary);
     margin: 0 5rem;
     box-sizing: border-box;
     height: 5rem;
     justify-content: space-evenly;
     align-items: center;
+
+    border: 1px solid var(--semi-primary);
+    border-radius: 0.75rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
 }

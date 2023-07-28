@@ -27,7 +27,7 @@ if(isset($_POST['login'],$_POST['password'],$_POST['confirm-password'])) {
     };
 }
 ?>
-<div class="signup">
+<div class="foreing signup">
 <form action="cadastro.php" method="post">
 
 <label for="login">Login: </label>
@@ -36,10 +36,9 @@ if(isset($_POST['login'],$_POST['password'],$_POST['confirm-password'])) {
 <input type="password" name="password" id="password">
 <label for="confirm-password">Confirmar Senha: </label>
 <input type="password" name="confirm-password" id="confirm-password">
-<button type="submit">Cadastrar-se</button>
-<br>
-<p>Já tem um cadastro? <a href="login.php">Faça login!</a></p>
+<button type="submit" class="btn-confirm">Cadastrar-se</button>
 </form>
+<p>Já tem um cadastro? <a href="login.php">Faça login!</a></p>
 </div>
 <?php 
 include("crud-templates/crud-footer.php");

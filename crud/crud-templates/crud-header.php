@@ -17,10 +17,10 @@ if (!isset($_SESSION["username"])) {
     <title>Admin-Page</title>
 </head>
 <body>
-    <header>
-        <div class="head-logo">
-            &nbsp;
-        </div>
+    <header class="blur">
+        <figure class="head-logo">
+            <a href="https://open.spotify.com/"><i class="fa fa-spotify fa-3x"></i></a>
+        </figure>
         <div class="head-nav">
             <ul>
                 <li><a href="../pags/index.php">Home</a></li>
@@ -33,6 +33,6 @@ if (!isset($_SESSION["username"])) {
         </div>
     </header>
 
-<div class="admin-container">
+<div class="admin-container blur">
     
 
