@@ -8,6 +8,6 @@
             <li><a href="about.php">Quem Somos</a></li>
         </ul>
     </footer>
- 
+    <script src="../src/scripts/main.js"></script>
 </body>
 </html>

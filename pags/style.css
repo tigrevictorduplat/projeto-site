@@ -147,17 +147,37 @@ figure img {
     height: 100%;
 }
 
+/* Progress Bar Style */
+
 .tracker {
     color: var(--secondary);
     filter: drop-shadow(0px 0px 8px rgba(59, 217, 217, 0.45));
     
 }
 
-.tracker progress {
-    stroke-width: 8px;
-    stroke: var(--secondary, #1A3540);
+/*          Reset          */
+.tracker progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.5rem;
+    margin: 0.5rem;
+  }
+
+/*          Bar          */
+.tracker progress[value]::-webkit-progress-bar {
+    background-color: hsla(180, 80%, 85%, 0.75);
+    backdrop-filter: blur(8px) saturate(180%);
+    border-radius: 1rem;
     filter: drop-shadow(0px 0px 8px rgba(59, 217, 217, 0.45));
-    width: 95%;
+    
+}
+
+/*          Progress          */
+.tracker progress[value]::-webkit-progress-value {
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    filter: drop-shadow(0px 0px 8px rgba(59, 217, 217, 0.45));
 }
 
 hr {

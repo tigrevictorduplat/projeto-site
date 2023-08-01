@@ -11,6 +11,14 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
     
     include("conexao.php");
     mysqli_query($con,"INSERT INTO tb_post (post_title,post_first_content,post_second_content,post_first_imgURL,post_second_imgURL,post_class) VALUES ('$postTitle','$firstContent','$secondContent','$firstURL','$secondURL')");
+
+} else if (isset($_POST['extra_id'],$_POST['extra_subtitle'],$_POST['extra_img'])){
+        echo ("Entrei");
+        $extraID = $_POST['extra_id'];
+        $extraSubtitle = $_POST['extra_subtitle'];
+        $extraURL = $_POST['extra_img'];
+        include("conexao.php");
+        mysqli_query($con,"INSERT INTO tb_extras (extra_post_foreing_key,extra_subtitle,extra_img) VALUES ('$extraID','$extraSubtitle','$extraURL')");
 }
 ?>
 
@@ -127,6 +135,11 @@ $result = mysqli_query($con, "SELECT * FROM tb_extras ");
 <?php
 } 
 ?>
+<tr>
+    <td colspan="4" style="text-align: center;">
+    <a href="inserir-extra.php"><strong>Novo Extra</strong><i class="fa fa-plus"></i></a>
+    </td>
+</tr>
 </table>
 </div>
 

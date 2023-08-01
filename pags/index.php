@@ -9,19 +9,19 @@ $currentPag = mysqli_fetch_array ($result);
 $postID = $currentPag['index_pag1']; 
 include("../template-parts/content.php"); 
 ?>
-<hr>
+<hr id = "first-break">
 <?php
 $postID = $currentPag['index_pag2']; 
 include("../template-parts/content.php"); 
 ?>
-<hr>
+<hr id = "second-break">
 <?php
 $postID = $currentPag['index_pag3']; 
 include("../template-parts/content.php"); 
 ?>
 </div>
 <?php
-$extraID = $currentPag['index_pag1']; 
+$extraID = $currentPag['index_pag2']; 
 include("../template-parts/right-content.php"); 
 ?>
 </div>
