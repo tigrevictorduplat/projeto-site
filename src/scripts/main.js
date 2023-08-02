@@ -5,13 +5,7 @@ function getYPostion(element) {
 
 document.addEventListener("DOMContentLoaded", function() {
     const progressBar = document.querySelector("progress");
-    /*
-    const firstDivisor = document.getElementById("first-break");
-    const secondDivisor = document.getElementById("second-break");
-    const rigthContainer = document.querySelector(".right-content");
-    */
     
-
     window.addEventListener("scroll", function(){
         let pageElement = this.document.documentElement;
         
