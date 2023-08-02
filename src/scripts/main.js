@@ -3,8 +3,18 @@ function getYPostion(element) {
     return rect.top + window.scrollY;
   }
 
+  function getInfos(){
+    $.ajax({
+        url:'http://localhost/projeto-site/src/scripts/js-crud/right-content.php',
+        method:'GET',  
+        dataType:'json'
+    }).done(function(result){
+        console.log(result);
+    });
+}
 document.addEventListener("DOMContentLoaded", function() {
     const progressBar = document.querySelector("progress");
+    getInfos();
     
     window.addEventListener("scroll", function(){
         let pageElement = this.document.documentElement;
@@ -19,5 +29,4 @@ document.addEventListener("DOMContentLoaded", function() {
       
     });
 
-    
 })
