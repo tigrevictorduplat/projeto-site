@@ -3,9 +3,8 @@ include("crud-templates/crud-header.php");
 
 $postID = (isset($_GET['post_id']))? $_GET['post_id'] : $_POST['post_id'];
 
-if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'],$_POST['post_class'])){
+if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_content'],$_POST['post_first_imgURL'],$_POST['post_second_imgURL'])){
 
-    $postClass = $_POST['post_class'];
     $postTitle = $_POST['post_title'];
     $firstContent = $_POST['post_first_content'];
     $secondContent = $_POST['post_second_content'];
@@ -13,7 +12,7 @@ if (isset($_POST['post_title'],$_POST['post_first_content'],$_POST['post_second_
     $secondURL = $_POST['post_second_imgURL'];
     
     include("conexao.php");
-    mysqli_query($con,"UPDATE tb_post SET post_title ='$postTitle' , post_first_content = '$firstContent' ,post_second_content='$secondContent' ,post_first_imgURL='$firstURL' ,post_second_imgURL='$secondURL' ,post_class='$postClass' WHERE post_id = '$postID' ");
+    mysqli_query($con,"UPDATE tb_post SET post_title ='$postTitle' , post_first_content = '$firstContent' ,post_second_content='$secondContent' ,post_first_imgURL='$firstURL' ,post_second_imgURL='$secondURL' WHERE post_id = '$postID' ");
 
     header("location:listar.php");
     die;
@@ -28,14 +27,6 @@ $row = mysqli_fetch_array($result);
 <form action="alterar.php" method="post">
 <input type="hidden" name="post_id" id="post_id" value="<?=$row['post_id']?>" >
 <table>
-        <tr>
-            <td>
-                <label for="post_class">Classe:</label>
-            </td>
-            <td>
-            <input type="text" name="post_class" id="post_class" value="<?= $row['post_class'] ?>">
-            </td>
-        </tr>
         <tr>
             <td>
                 <label for="post_title">Titulo: </label>

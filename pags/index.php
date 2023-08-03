@@ -1,4 +1,5 @@
 <?php include("../template-parts/header.php"); ?>
+<script src="../src/scripts/main.js"></script>
 <div class="container">
     <div class="content">
 <?php
@@ -20,9 +21,11 @@ $postID = $currentPag['index_pag3'];
 include("../template-parts/content.php"); 
 ?>
 </div>
+<section class="right-content">
 <?php
-$extraID = $currentPag['index_pag2']; 
+$extraID = $currentPag['index_pag1']; 
 include("../template-parts/right-content.php"); 
 ?>
+</section>
 </div>
 <?php include("../template-parts/footer.php"); ?>

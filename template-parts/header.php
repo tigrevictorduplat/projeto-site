@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../src/img/spot-icon.ico" type="image/x-icon">
     <script src="../src/scripts/JQuery/jquery-3.6.4.min.js"></script>
-    <script src="../src/scripts/main.js"></script>
+    
     <title>SpotMy</title>
 </head>
 <body>    
