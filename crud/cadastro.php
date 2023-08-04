@@ -12,11 +12,11 @@ if(isset($_POST['login'],$_POST['password'],$_POST['confirm-password'])) {
     $exists = mysqli_num_rows($result);
     if ($exists){
         echo(
-            '<p style="color:red;">Este usuário já existe!</p>'
+            '<p class="incorrect">Este usuário já existe!</p>'
         );
     }else if($password != $confirmPassword) {
         echo(
-            '<p style="color:red;">As senhas não coincidem!</p>'
+            '<p class="incorrect">As senhas não coincidem!</p>'
         );
         
     } else {

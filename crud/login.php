@@ -13,6 +13,10 @@ if(isset($_POST['login'],$_POST['password'])) {
         $_SESSION['username']= $username; 
         header('location:listar.php');
       die;
+    } else {
+        echo(
+            '<p class="incorrect"> Usuário ou Senha incorreto!</p>'
+        );
     } ;
 }
 ?>

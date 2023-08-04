@@ -27,10 +27,15 @@ html{
 html, body {
     width: 100%;
     background-color: var(--primary);
-    background-image: url(https://thumbs.dreamstime.com/b/seamless-musical-notation-pattern-13710700.jpg);
-    background-repeat: repeat; 
-   
+    background: repeat url(https://thumbs.dreamstime.com/b/seamless-musical-notation-pattern-13710700.jpg);
+    animation: moveIt 50s linear infinite;
 }
+
+@keyframes moveIt {
+  from {background-position: bottom left;}
+  to {background-position: bottom right;}
+}
+
 
 * {
     margin: 0;
@@ -112,6 +117,7 @@ header a:hover {
 hr {
     border: 1px solid var(--primary);
     margin: 0.5rem 0;
+    align-self: center;
   }
 /* Post Preview*/
 
@@ -127,6 +133,15 @@ hr {
     width: 25%;
     text-align: center;
 }
+/* Extra Preview*/
+.right-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content img {
+    width: 40%;
+}
 
 
 /* Listed Tables */
@@ -135,16 +150,16 @@ hr {
     padding: 1rem;
 }
 
-.admin-container table {
+.admin-views table {
     flex: 0 0 100%;
     margin: 0 auto;
     text-align: center;
     color: var(--dark-primary);
 
 }
-.admin-container table td{
+.admin-views table td{
     
-    padding: 0 0.75rem;
+    padding: 0.5rem 0.75rem;
     text-align: center;
 
 }
@@ -195,6 +210,13 @@ form input , form button {
     color: lightblue;
     background-color: var(--primary);
     padding: 0.15rem;
+}
+
+.incorrect {
+    
+    flex: 0 0 100%;
+    background-color: rgba(139, 0, 0, 0.65);
+    color: rgb(255, 113, 113);
 }
 
 /* Admin Footer */

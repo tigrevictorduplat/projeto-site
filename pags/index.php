@@ -21,9 +21,21 @@ $postID = $currentPag['index_pag3'];
 include("../template-parts/content.php"); 
 ?>
 </div>
-<section class="right-content">
+<section id="extra1" class="right-content">
 <?php
 $extraID = $currentPag['index_pag1']; 
+include("../template-parts/right-content.php"); 
+?>
+</section>
+<section id="extra2" class="right-content" hidden>
+<?php
+$extraID = $currentPag['index_pag2']; 
+include("../template-parts/right-content.php"); 
+?>
+</section>
+<section id="extra3" class="right-content" hidden>
+<?php
+$extraID = $currentPag['index_pag3']; 
 include("../template-parts/right-content.php"); 
 ?>
 </section>

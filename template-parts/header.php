@@ -21,7 +21,14 @@
             <a href="https://open.spotify.com/"><i class="fa fa-spotify fa-3x"></i></a>
         </figure>
         <div class="head-nav">
-            <ul >
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="pag1.php">Pag 1</a></li>
+            <li><a href="pag2.php">Pag 2</a></li>
+            <li><a href="pag3.php">Pag 3</a></li>
+            <li><a href="about.php">Quem Somos</a></li>
+            </div>
+            <div class="head-nav icon">
                 <li><a href=""><i class="fa fa-search" ></i></a></li>
                 <li><a href="../crud/login.php"><i class="fa fa-cog" ></i></a></li>
                 
