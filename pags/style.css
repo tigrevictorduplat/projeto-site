@@ -49,14 +49,14 @@ strong {
 header {
     display: flex;
     justify-content:space-between;
-    flex: 0 0 100%;
+    align-items: center;
     background: var(--secondary);
     margin: 0 5rem;
     box-sizing: border-box;
     height: 5rem;
 }
 header a {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--primary);
     text-decoration: none;
 }
@@ -85,9 +85,10 @@ header a:hover {
 
 .head-nav li{
     display: inline-block;
-    padding: 1rem;
+    padding: 1.5rem;
 }
-.icon {
+
+.head-nav i{
     font-size: 1.5rem;
 }
 

@@ -28,7 +28,7 @@
             <li><a href="pag3.php">Pag 3</a></li>
             <li><a href="about.php">Quem Somos</a></li>
             </div>
-            <div class="head-nav icon">
+            <div class="head-nav">
                 <li><a href=""><i class="fa fa-search" ></i></a></li>
                 <li><a href="../crud/login.php"><i class="fa fa-cog" ></i></a></li>
                 
